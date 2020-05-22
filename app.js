@@ -32,6 +32,10 @@ const getWeather = async url => {
   try {
     const response = await fetch(url);
     const json = await response.json();
+    if(json.cod === 401) {
+      console.log(chalk.red.bold('There is a problem with your openweathermap API key, please check that the key is correct and active'));
+      return;
+    }
     parseWeatherResponse(json);
   } catch (error) {
     console.log(error);
@@ -43,12 +47,20 @@ const getCoordinates = async url => {
   try {
     const response = await fetch(url);
     const json = await response.json();
+    if(json.message === 'Not Authorized - Invalid Token') {
+      console.log(chalk.red.bold('There is a problem with your mapbox API key, please check that the key is correct and active'));
+      return;
+    }
     let lat = json.features[0].center[1];
     let lon = json.features[0].center[0];
     name = json.features[0].place_name;
     getWeather(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${weatherKey}`);
   } catch (error) {
-    console.log(error);
+    if(error.name === 'TypeError') {
+      console.log(chalk.red.bold('The location you have entered is not valid, please enter a valid location'));
+    } else {
+      console.log(error);
+    }
   }
 };
 
