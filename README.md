@@ -74,7 +74,7 @@ node app.js london -c, -celsius
 
 You can enter the name of a City, a Region, even a whole Nation! 
 
-Note a default will be selected and temperature flag will be ignored if you do not place input within quotes.
+Note a default will be selected and temperature flag will be ignored if you do not place input within single or double quotes.
 
 (add screenshot
 between `node app.js "new j" -f` and `node app.js new j -f`
