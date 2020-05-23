@@ -1,5 +1,9 @@
 # chingu_weather_CLI
 
+## Overview
+
+This app is the solo-project for [chingu](https://www.chingu.io/) Voyage 20.
+
 chingu_weather_CLI is a Node.js command line application to fetch weather informations based on user input. 
 
 The retrieved informations will be shown in the console and saved in a message.txt file.
@@ -102,3 +106,9 @@ If there is a problem with one of the API key, the app will log:
 While if you enter an invalid location you will receive:
 
 ![console](https://i.ibb.co/w4H07Lf/Screenshot-2020-05-22-at-20-12-51.png)
+
+## Dependencies
+
+* I've used [dotenv](https://www.npmjs.com/package/dotenv) to hide the API keys in a .env file
+* [node-fetch](https://www.npmjs.com/package/node-fetch) is used to fetch the APIs used in this app
+* [chalk](https://www.npmjs.com/package/chalk) makes the logs more visually appealing
