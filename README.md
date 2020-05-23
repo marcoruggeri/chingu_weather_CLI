@@ -63,16 +63,35 @@ A flag can be added as a second argument to retrieve the temperature only for th
 Examples:
 
 ```js
-node app.js london -f
+node app.js london -f, -fahrenheit
 ```
 ![console](https://i.ibb.co/7bfjs4p/Screenshot-2020-05-22-at-07-17-33.png)
 
 ```js
-node app.js london -celsius
+node app.js london -c, -celsius
 ```
 ![console](https://i.ibb.co/5Tzswb9/Screenshot-2020-05-22-at-07-17-49.png)
 
 You can enter the name of a City, a Region, even a whole Nation! 
+
+Note a default will be selected and temperature flag will be ignored if you do not place input within single or double quotes.
+
+(add screenshot
+between `node app.js "new j" -f` and `node app.js new j -f`
+
+`node app.js "new j" -f`                 
+Current temperature in New Jersey, United States is 62.49F.
+Conditions are currently: mist
+What you should expect: moderate rain throughout the day.
+
+`node app.js new j -f` 
+Current temperature in New York, New York, United States is 17.44C - 63.39F.
+Conditions are currently: mist
+What you should expect: heavy intensity rain throughout the day.
+```
+
+)
+
 
 ```js
 node app.js Florida
