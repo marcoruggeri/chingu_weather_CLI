@@ -63,16 +63,20 @@ A flag can be added as a second argument to retrieve the temperature only for th
 Examples:
 
 ```js
-node app.js london -f
+node app.js london -f, -fahrenheit
 ```
 ![console](https://i.ibb.co/7bfjs4p/Screenshot-2020-05-22-at-07-17-33.png)
 
 ```js
-node app.js london -celsius
+node app.js london -c, -celsius
 ```
 ![console](https://i.ibb.co/5Tzswb9/Screenshot-2020-05-22-at-07-17-49.png)
 
 You can enter the name of a City, a Region, even a whole Nation! 
+
+Note a default will be selected if you do not place input within quotes.
+(add screenshot between `node app.js "new j" -f` and `node app.js "new j -f`)
+
 
 ```js
 node app.js Florida
