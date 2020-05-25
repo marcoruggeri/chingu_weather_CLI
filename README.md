@@ -74,24 +74,19 @@ node app.js london -c, -celsius
 
 You can enter the name of a City, a Region, even a whole Nation! 
 
-Note a default will be selected and temperature flag will be ignored if you do not place input within single or double quotes.
+**Note** that if you want to search for a location composed by two words you will have to include the words inside quotes, otherwise you will get unexpected results:
 
-(add screenshot
-between `node app.js "new j" -f` and `node app.js new j -f`
+```js
+node app.js "new j" -f
+```      
 
-`node app.js "new j" -f`                 
-Current temperature in New Jersey, United States is 62.49F.
-Conditions are currently: mist
-What you should expect: moderate rain throughout the day.
+![console](https://i.ibb.co/LZTzdc3/Screenshot-2020-05-25-at-10-32-46.png)    
 
-`node app.js new j -f` 
-Current temperature in New York, New York, United States is 17.44C - 63.39F.
-Conditions are currently: mist
-What you should expect: heavy intensity rain throughout the day.
+```js
+node app.js new j -f
 ```
 
-)
-
+![console](https://i.ibb.co/BPH2Qty/Screenshot-2020-05-25-at-10-33-15.png)
 
 ```js
 node app.js Florida
